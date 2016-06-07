@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CCS & Jquery Demo</title>
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<style type="text/css">
+		.animation-wrap{position: relative;}
+		.rect {width: 100px; height: 100px; background: red; position: absolute; left: 0; top: 0; transition: all ease-in-out 1s}
+		.rect-1{ background: blue;    background: blue;    left: 100px !important; top: 20px !important; }
+		.rect-2{ background: green; }
+		.rect-3{ background: yellow; }
+		.rect-4{ background: pink; }
+		.rect-5{ background: green; }
+		.rect-6{ background: yellow;}
+		.rect-7{ background: pink; }
+	</style>
+</head>
+<body>
+	<div class="animation-wrap">
+		<a class="animate" href="#">Animate</a>
+		<div class="rect rect-1">
+			<div class="rect rect-2">
+				<div class="rect rect-3">
+					<div class="rect rect-4">
+						<div class="rect rect-5">
+							<div class="rect rect-6">
+								<div class="rect rect-7">
+									<div class="rect rect-8">
+										<div class="rect rect-9">
+											<div class="rect rect-10"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){			
+			$(".animate").click(function(){
+				$(".rect").css({"left":"50%","top":"50%"});
+				$(".rect-7, .rect-8, .rect-9, .rect-10").css({"left":"70%","top":"-50%"});
+			});
+		});
+	</script>
+</body>
+</html>
